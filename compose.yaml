@@ -1,0 +1,14 @@
+services:
+  operation-gps:
+    restart: unless-stopped
+    build: .
+    env_file:
+      - .env
+    ports:
+      - '4401:4401'
+    networks:
+      - net_transmodal
+networks:
+  net_transmodal:
+    external: true
+    name: net_transmodal

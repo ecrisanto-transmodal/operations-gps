@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: operations-gps
+  config:
+    import: optional:file:data/application-config.yaml
+
+  datasource:
+    name: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+
+server:
+  port: 4401
